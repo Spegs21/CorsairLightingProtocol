@@ -26,8 +26,8 @@ THE SOFTWARE.
 #include <Arduino.h>
 
 #if defined(ARDUINO_ARCH_SAMD)
-#define HID_REPORT_TYPE_INPUT   1
-#define HID_REPORT_TYPE_OUTPUT  2
+#define HID_REPORT_TYPE_INPUT 1
+#define HID_REPORT_TYPE_OUTPUT 2
 #define HID_REPORT_TYPE_FEATURE 3
 #endif
 
@@ -155,7 +155,7 @@ public:
 		return USB_Send(pluggedEndpoint | TRANSFER_RELEASE, buffer, size);
 #else
 		return USBDevice.send(pluggedEndpoint, buffer, size);
-#endif		
+#endif
 	}
 
 protected:

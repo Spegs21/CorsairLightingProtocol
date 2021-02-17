@@ -88,8 +88,7 @@ int CLP::RawHID_::getInterface(uint8_t* interfaceCount) {
 	return USB_SendControl(0, &hidInterface, sizeof(hidInterface));
 #else
 	return USBDevice.sendControl(0, &hidInterface, sizeof(hidInterface));
-
-#endif	
+#endif
 }
 
 int CLP::RawHID_::getDescriptor(USBSetup& setup) {
@@ -113,8 +112,7 @@ int CLP::RawHID_::getDescriptor(USBSetup& setup) {
 	return USB_SendControl(TRANSFER_PGM, _hidReportDescriptorRawHID, sizeof(_hidReportDescriptorRawHID));
 #else
 	return USBDevice.sendControl(_hidReportDescriptorRawHID, sizeof(_hidReportDescriptorRawHID));
-
-#endif		
+#endif
 }
 
 bool CLP::RawHID_::setup(USBSetup& setup) {
