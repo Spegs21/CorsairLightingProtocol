@@ -169,7 +169,7 @@ bool CLP::RawHID_::setup(USBSetup& setup) {
 				if (!dataAvailable && length <= dataLength) {
 					// Write data to fit to the end (not the beginning) of the array
 
-#if defined(ARDUINO_ARCH_AVR)					
+#if defined(ARDUINO_ARCH_AVR)
 					USB_RecvControl(data + dataLength - length, length);
 #else
 					USBDevice.recvControl(data + dataLength - length, length);
