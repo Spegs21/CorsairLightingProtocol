@@ -154,7 +154,7 @@ public:
 #if defined(ARDUINO_ARCH_AVR)
 		return USB_Send(pluggedEndpoint | TRANSFER_RELEASE, buffer, size);
 #else
-	    return USBDevice.send(pluggedEndpoint, buffer, size);
+		return USBDevice.send(pluggedEndpoint, buffer, size);
 #endif		
 	}
 
